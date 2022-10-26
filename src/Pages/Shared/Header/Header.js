@@ -19,12 +19,24 @@ const Header = () => {
         <ul className="flex items-center hidden space-x-1 lg:flex">
           <li>
             <NavLink
+              to="/home"
+              className={({ isActive }) =>
+                isActive
+                  ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
+                  : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
+              }
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/course"
               className={({ isActive }) =>
-                  isActive
-                    ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                    : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
-                }
+                isActive
+                  ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
+                  : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
+              }
             >
               Course
             </NavLink>
@@ -33,10 +45,10 @@ const Header = () => {
             <NavLink
               to="/blog"
               className={({ isActive }) =>
-                  isActive
+                isActive
                   ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
                   : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
-                }
+              }
             >
               Blog
             </NavLink>
@@ -45,10 +57,10 @@ const Header = () => {
             <NavLink
               to="/fqa"
               className={({ isActive }) =>
-                  isActive
+                isActive
                   ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
                   : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
-                }
+              }
             >
               FQA
             </NavLink>
@@ -57,10 +69,10 @@ const Header = () => {
             <NavLink
               to="/aboutUs"
               className={({ isActive }) =>
-                  isActive
+                isActive
                   ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
                   : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
-                }
+              }
             >
               About us
             </NavLink>
@@ -82,6 +94,14 @@ const Header = () => {
             >
               Login
             </NavLink>
+          </li>
+          <li>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">Remember me</span>
+                <input type="checkbox" className="toggle toggle-secondary" checked />
+              </label>
+            </div>
           </li>
         </ul>
         <div className="lg:hidden">
@@ -141,8 +161,24 @@ const Header = () => {
                   <ul className="space-y-4">
                     <li>
                       <NavLink
+                        to="/home"
+                        className={({ isActive }) =>
+                          isActive
+                            ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
+                            : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
+                        }
+                      >
+                        Home
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
                         to="/course"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className={({ isActive }) =>
+                          isActive
+                            ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
+                            : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
+                        }
                       >
                         Course
                       </NavLink>
@@ -150,7 +186,11 @@ const Header = () => {
                     <li>
                       <NavLink
                         to="/blog"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className={({ isActive }) =>
+                          isActive
+                            ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
+                            : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
+                        }
                       >
                         Blog
                       </NavLink>
@@ -158,7 +198,11 @@ const Header = () => {
                     <li>
                       <NavLink
                         to="/fqa"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className={({ isActive }) =>
+                          isActive
+                            ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
+                            : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
+                        }
                       >
                         FQA
                       </NavLink>
@@ -166,7 +210,11 @@ const Header = () => {
                     <li>
                       <NavLink
                         to="/aboutUs"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className={({ isActive }) =>
+                          isActive
+                            ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
+                            : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
+                        }
                       >
                         About us
                       </NavLink>
@@ -174,7 +222,7 @@ const Header = () => {
                     <li>
                       <NavLink
                         to="/signup"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide text-gray-700 transition duration-200 rounded hover:text-amber-400 "
                       >
                         Sign up
                       </NavLink>
@@ -182,7 +230,7 @@ const Header = () => {
                     <li>
                       <NavLink
                         to="/login"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide text-gray-700 transition duration-200 rounded hover:text-amber-400 "
                       >
                         Login
                       </NavLink>

@@ -17,8 +17,8 @@ const ErrorPage = () => {
             <div className="mb-16 md:mb-0 md:max-w-xl sm:mx-auto md:text-center">
                 <div className="">
                     <Link
-                        to="/course"
-                        className="bg-gray-400 inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        to="/home"
+                        className="border inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-gray-800 transition duration-200  rounded bg-deep-purple-accent-400 hover:bg-amber-200"
                     >
                      Back To Home
                     </Link>
