@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mb-0">
       <div className="relative flex items-center justify-between">
         <NavLink
           to="/"
@@ -95,14 +95,7 @@ const Header = () => {
               Login
             </NavLink>
           </li>
-          <li>
-            <div className="form-control">
-              <label className="label cursor-pointer">
-                <span className="label-text">Remember me</span>
-                <input type="checkbox" className="toggle toggle-secondary" checked />
-              </label>
-            </div>
-          </li>
+
         </ul>
         <div className="lg:hidden">
           <button
