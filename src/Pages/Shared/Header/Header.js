@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mb-0">
+    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 pb-0">
       <div className="relative flex items-center justify-between">
         <NavLink
           to="/"
@@ -62,19 +62,7 @@ const Header = () => {
                   : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
               }
             >
-              FQA
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/aboutUs"
-              className={({ isActive }) =>
-                isActive
-                  ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                  : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
-              }
-            >
-              About us
+              FqA
             </NavLink>
           </li>
         </ul>
@@ -197,19 +185,7 @@ const Header = () => {
                             : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
                         }
                       >
-                        FQA
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/aboutUs"
-                        className={({ isActive }) =>
-                          isActive
-                            ? 'font-medium tracking-wide text-blue-700 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                            : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
-                        }
-                      >
-                        About us
+                        FqA
                       </NavLink>
                     </li>
                     <li>

@@ -38,10 +38,6 @@ export const routes = createBrowserRouter([
                 path:'fqa',
                 element:<FqA></FqA>
             },
-            {
-                path:'aboutUs',
-                element:<AboutUs></AboutUs>
-            }
 
         ]
     },

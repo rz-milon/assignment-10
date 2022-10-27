@@ -111,7 +111,7 @@ const Footer = () => {
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           <li>
             <Link
-              to="/"
+              to="/fqa"
               className="text-sm text-gray-600 transition-colors duration-300 hover:border-b hover:border-b-2 border-green-500"
             >
               F.A.Q
