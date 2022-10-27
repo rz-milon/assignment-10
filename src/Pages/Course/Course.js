@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 
 
 
 const Course = () => {
-    const [courseItems, setCourseItems] = useState([]);
-    const [course, setCourse] = useState([]);
+    // const [courseItems, setCourseItems] = useState([]);
+    // const [course, setCourse] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/course-items')
-            .then(res => res.json())
-            .then(data => setCourseItems(data))
-    }, []);
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/course-items')
+    //         .then(res => res.json())
+    //         .then(data => setCourseItems(data))
+    // }, []);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/course')
-            .then(res => res.json())
-            .then(data => setCourse(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/course')
+    //         .then(res => res.json())
+    //         .then(data => setCourse(data))
+    // }, [])
+     const courseItems = useLoaderData()
 
     return (
         <div className='bg-gray-100'>
@@ -25,7 +26,7 @@ const Course = () => {
                 <div className='grid lg:col-span-9 md:cols-span-12 '>
                     <h2 className='text-slate-500 font-semibold text-2xl py-10'>COURSE FEATURES</h2>
                     <div className='grid lg:grid-cols-2 md:grid-cols-1 gap-4 lg:px-8'>
-                        {
+                        {/* {
                             course.map(c => <div key={c.id}className='bg-white hover:shadow-xl shadow-gray-900 rounded-xl'>
                                 <div className="card">
                                     <figure><img src={c.thumbnail_url}alt="course" /></figure>
@@ -38,7 +39,7 @@ const Course = () => {
                                     </div>
                                 </div>
                             </div>)
-                        }
+                        } */}
                     </div>
                 </div>
                 <div className='grid lg:col-span-3 md:cols-span-12 lg:px-8'>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaSun } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 
@@ -63,7 +64,7 @@ const Header = () => {
                   : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
               }
             >
-              FqA
+              FAQ
             </NavLink>
           </li>
         </ul>
@@ -84,6 +85,7 @@ const Header = () => {
               Login
             </NavLink>
           </li>
+          <FaSun></FaSun>
         </ul>
         <div className="lg:hidden">
           <button
@@ -185,7 +187,7 @@ const Header = () => {
                             : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-gray-100 px-6 py-3 rounded'
                         }
                       >
-                        FqA
+                        FAQ
                       </NavLink>
                     </li>
 

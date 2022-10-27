@@ -5,6 +5,8 @@ import Course from "../../Pages/Course/Course";
 import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
 import FqA from "../../Pages/FqA/FqA";
 import Home from "../../Pages/Home/Home";
+import Login from "../../Pages/Login/Login/Login";
+import Signup from "../../Pages/Login/Signup/Signup";
 import ErrorPage from "../../Pages/Others/ErrorPage/ErrorPage";
 
 export const routes = createBrowserRouter([
@@ -19,6 +21,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path:'/courseItems/:id',
+                loader: ()=> fetch('http://localhost:5000/course-items'),
                 element:<Course></Course>
             },
             {
@@ -26,7 +29,7 @@ export const routes = createBrowserRouter([
                 element:<Course></Course>
             },
             {
-                path:'/courseItems/:id',
+                path:'/course/:id',
                 element:<CourseDetails></CourseDetails>
             },
             {
@@ -36,6 +39,14 @@ export const routes = createBrowserRouter([
             {
                 path:'fqa',
                 element:<FqA></FqA>
+            },
+            {
+                path:'signup',
+                element:<Signup></Signup>
+            },
+            {
+                path:'login',
+                element:<Login></Login>
             },
 
         ]

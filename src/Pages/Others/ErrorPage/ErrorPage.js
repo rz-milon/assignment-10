@@ -1,6 +1,8 @@
 import React from 'react';
+import { FaChevronLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import errorImg from './../../../assets/error-page.gif'
+
 
 
 const ErrorPage = () => {
@@ -16,10 +18,11 @@ const ErrorPage = () => {
             </div>
             <div className="mb-16 md:mb-0 md:max-w-xl sm:mx-auto md:text-center">
                 <div className="">
-                    <Link
+                <Link
                         to="/home"
                         className="border inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-gray-800 transition duration-200  rounded bg-deep-purple-accent-400 hover:bg-amber-200"
                     >
+                        <FaChevronLeft className='flex justify-start mr-4'></FaChevronLeft>
                      Back To Home
                     </Link>
                 </div>
