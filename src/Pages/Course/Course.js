@@ -23,7 +23,7 @@ const Course = () => {
         <div className='bg-gray-100'>
             <div className='grid lg:grid-cols-12  px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-10'>
                 <div className='grid lg:col-span-9 md:cols-span-12 '>
-                    <h2 className='text-slate-500 font-semibold text-2xl py-10'>COURSE DETAILS</h2>
+                    <h2 className='text-slate-500 font-semibold text-2xl py-10'>COURSE FEATURES</h2>
                     <div className='grid lg:grid-cols-2 md:grid-cols-1 gap-4 lg:px-8'>
                         {
                             course.map(c => <div key={c.id}className='bg-white hover:shadow-xl shadow-gray-900 rounded-xl'>

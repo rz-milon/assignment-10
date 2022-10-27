@@ -2,7 +2,6 @@ import React from 'react';
 
 const FqA = () => {
     return (
-
         <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
             <h2 className='text-gray-500 font-bold text-2xl pb-10'>Frequently asked questions</h2>
             <div className="grid  lg:grid-cols-1 sm:max-w-sm sm:mx-auto lg:max-w-2xl">

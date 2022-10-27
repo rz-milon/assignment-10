@@ -5,7 +5,8 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 pb-0">
+    <>
+    <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 pb-0">
       <div className="relative flex items-center justify-between">
         <NavLink
           to="/"
@@ -66,7 +67,7 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
-        <ul className="flex items-center hidden space-x-2 lg:flex">
+        <ul className="flex items-center space-x-2 hidden lg:flex">
           <li>
             <NavLink
               to="/signup"
@@ -83,7 +84,6 @@ const Header = () => {
               Login
             </NavLink>
           </li>
-
         </ul>
         <div className="lg:hidden">
           <button
@@ -113,7 +113,7 @@ const Header = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <NavLink
-                      to="/"
+                      to="/home"
                       className="inline-flex items-center"
                     >
                       <i className="fa-solid fa-feather text-fuchsia-500"></i>
@@ -139,7 +139,7 @@ const Header = () => {
                   </div>
                 </div>
                 <nav>
-                  <ul className="space-y-4">
+                  <ul className="space-y-4 ">
                     <li>
                       <NavLink
                         to="/home"
@@ -188,7 +188,8 @@ const Header = () => {
                         FqA
                       </NavLink>
                     </li>
-                    <li>
+
+                    <li className='space-y-0'>
                       <NavLink
                         to="/signup"
                         className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide text-gray-700 transition duration-200 rounded hover:text-amber-400 "
@@ -196,7 +197,7 @@ const Header = () => {
                         Sign up
                       </NavLink>
                     </li>
-                    <li>
+                    <li className='space-y-0'>
                       <NavLink
                         to="/login"
                         className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide text-gray-700 transition duration-200 rounded hover:text-amber-400 "
@@ -212,6 +213,8 @@ const Header = () => {
         </div>
       </div>
     </div>
+    <hr />
+    </>
   );
 };
 
