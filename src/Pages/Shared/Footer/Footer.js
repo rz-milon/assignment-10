@@ -119,7 +119,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              to="/"
+              to="/home"
               className="text-sm text-gray-600 transition-colors duration-300 hover:border-b hover:border-b-2 border-green-500"
             >
               Privacy Policy
@@ -127,7 +127,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              to="/"
+              to="/home"
               className="text-sm text-gray-600 transition-colors duration-300 hover:border-b hover:border-b-2 border-green-500"
             >
               Terms &amp; Conditions
