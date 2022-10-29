@@ -3,34 +3,19 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+
 
 const Login = () => {
-    const [user, setUser] = useState({});
     const [error, setError] = useState('');
-    const { signIn, setLoading } = useContext(AuthContext);
+    const { signIn, setLoading, signInWithGoogle, signInWithGitHub, setUser} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const googleProvider = new GoogleAuthProvider();
+
+    
 
     const from = location.state?.from?.pathname || '/';
 
 
-
-
-    const handelGoogleSignIn = ()=>{
-        signInWithPopup(auth, googleProvider)
-        .then(result =>{
-          const user = result.user;
-          setUser(user);
-          console.log(user);
-    
-        })
-        .catch(error=>{
-          
-          console.error('Error :', error);
-        })
-      }
 
     const handleSubmit = event =>{
         event.preventDefault();
@@ -59,6 +44,28 @@ const Login = () => {
                 setLoading(false);
             })
     }
+
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+        .then( result => {
+            const user = result.user;
+            setUser(user);
+            // console.log(user);
+        })
+        .catch(error => console.error(error));
+    }
+
+    const handleGithubSignIn = ()=>{
+        signInWithGitHub()
+        .then(result=>{
+          const user = result.user;
+          setUser(user)
+        })
+        .cath(error=>{
+          console.error("error:", error)
+        })
+      }
 
     return (
         <div>
@@ -115,10 +122,10 @@ const Login = () => {
                     </div>
 
                     <div className="flex flex-row justify-center items-center space-x-10">
-                        <button className='hover:opacity-50  cursor-pointer transition ease-in duration-300'>
+                        <button onClick={handleGoogleSignIn} className='hover:opacity-50  cursor-pointer transition ease-in duration-300'>
                             <FaGoogle className='w-8 h-8'></FaGoogle>
                         </button>
-                        <button className='hover:opacity-50  cursor-pointer transition ease-in duration-300'>
+                        <button onClick={handleGithubSignIn} className='hover:opacity-50  cursor-pointer transition ease-in duration-300'>
                             <FaGithub className='w-8 h-8'></FaGithub>
                         </button>
                     </div>
