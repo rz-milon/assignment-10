@@ -1,6 +1,6 @@
 
 import React, { useContext, useState } from 'react';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { FaEnvira, FaMoon, FaSun } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
@@ -8,7 +8,6 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
@@ -23,14 +22,14 @@ const Header = () => {
   }
   return (
     <div className=''>
-      <div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 pb-0">
+      <div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 absolute left-0 right-0 top-0">
         <div className="relative flex items-center justify-between">
           <NavLink
             to="/"
             className="inline-flex items-center"
           >
-            <i className="fa-solid fa-feather text-fuchsia-500"></i>
-            <span className="ml-2 text-xl font-bold tracking-wide text-lime-500 uppercase hover:text-blue-500">
+            <FaEnvira className='text-4xl text-green-800 mr-3'></FaEnvira>
+            <span className="ml-2 text-xl font-bold tracking-wide text-indigo-800 uppercase hover:text-blue-700">
               Al Farabi Academy
             </span>
           </NavLink>
@@ -40,8 +39,8 @@ const Header = () => {
                 to="/home"
                 className={({ isActive }) =>
                   isActive
-                    ? 'font-medium tracking-wide text-blue-900 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                    : 'font-medium tracking-wide  text-gray-400 transition-colors duration-200 hover:text-gray-800 px-6 py-3 rounded'
+                    ? 'font-medium tracking-wide text-blue-900 border-b-4 border-indigo-800 transition-colors duration-200 px-6 py-3 rounded'
+                    : 'font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-gray-900 px-6 py-3 rounded'
                 }
               >
                 Home
@@ -52,8 +51,8 @@ const Header = () => {
                 to="/course"
                 className={({ isActive }) =>
                   isActive
-                    ? 'font-medium tracking-wide text-blue-900 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                    : 'font-medium tracking-wide  text-gray-400 transition-colors duration-200 hover:text-gray-800 px-6 py-3 rounded'
+                    ? 'font-medium tracking-wide text-blue-900 border-b-4 border-indigo-800 transition-colors duration-200 px-6 py-3 rounded'
+                    : 'font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-gray-900 px-6 py-3 rounded'
                 }
               >
                 Course
@@ -64,8 +63,8 @@ const Header = () => {
                 to="/blog"
                 className={({ isActive }) =>
                   isActive
-                    ? 'font-medium tracking-wide text-blue-900 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                    : 'font-medium tracking-wide  text-gray-400 transition-colors duration-200 hover:text-gray-800 px-6 py-3 rounded'
+                    ? 'font-medium tracking-wide text-blue-900 border-b-4 border-indigo-800 transition-colors duration-200 px-6 py-3 rounded'
+                    : 'font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-gray-900 px-6 py-3 rounded'
                 }
               >
                 Blog
@@ -76,8 +75,8 @@ const Header = () => {
                 to="/fqa"
                 className={({ isActive }) =>
                   isActive
-                    ? 'font-medium tracking-wide text-blue-900 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                    : 'font-medium tracking-wide  text-gray-400 transition-colors duration-200 hover:text-gray-800 px-6 py-3 rounded'
+                    ? 'font-medium tracking-wide text-blue-900 border-b-4 border-indigo-800 transition-colors duration-200 px-6 py-3 rounded'
+                    : 'font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-gray-900 px-6 py-3 rounded'
                 }
               >
                 FAQ
@@ -96,7 +95,7 @@ const Header = () => {
                   <li>
                     <NavLink
                       to="/signup"
-                      className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide  text-gray-400 transition duration-200 rounded hover:text-amber-400 "
+                      className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide  text-gray-700 transition duration-200 rounded hover:text-amber-400 "
                     >
                       Sign up
                     </NavLink>
@@ -105,7 +104,7 @@ const Header = () => {
                   <li>
                     <NavLink
                       to="/login"
-                      className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide  text-gray-400 transition duration-200 rounded hover:text-amber-400 "
+                      className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide  text-gray-700 transition duration-200 rounded hover:text-amber-400 "
                     >
                       Log in
                     </NavLink>
@@ -115,8 +114,8 @@ const Header = () => {
 
             
             <div onClick={changeTheme} className='flex'>
-              <FaSun></FaSun>
-              <FaMoon></FaMoon>
+                <FaSun></FaSun> 
+                <FaMoon></FaMoon>
             </div>
           </ul>
           <div className="lg:hidden">
@@ -151,7 +150,7 @@ const Header = () => {
                         className="inline-flex items-center"
                       >
                         <i className="fa-solid fa-feather text-fuchsia-500"></i>
-                        <span className="ml-2 text-xl font-bold tracking-wide  text-gray-400 uppercase">
+                        <span className="ml-2 text-xl font-bold tracking-wide  text-gray-700 uppercase">
                           Al Farabi Academy
                         </span>
                       </NavLink>
@@ -179,8 +178,8 @@ const Header = () => {
                           to="/home"
                           className={({ isActive }) =>
                             isActive
-                              ? 'font-medium tracking-wide text-blue-900 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                              : 'font-medium tracking-wide  text-gray-400 transition-colors duration-200 hover:text-gray-800 px-6 py-3 rounded'
+                              ? 'font-medium tracking-wide text-blue-900 border-b-4 border-indigo-800 transition-colors duration-200 px-6 py-3 rounded'
+                              : 'font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-gray-900 px-6 py-3 rounded'
                           }
                         >
                           Home
@@ -191,8 +190,8 @@ const Header = () => {
                           to="/course"
                           className={({ isActive }) =>
                             isActive
-                              ? 'font-medium tracking-wide text-blue-900 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                              : 'font-medium tracking-wide  text-gray-400 transition-colors duration-200 hover:text-gray-800 px-6 py-3 rounded'
+                              ? 'font-medium tracking-wide text-blue-900 border-b-4 border-indigo-800 transition-colors duration-200 px-6 py-3 rounded'
+                              : 'font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-gray-900 px-6 py-3 rounded'
                           }
                         >
                           Course
@@ -203,8 +202,8 @@ const Header = () => {
                           to="/blog"
                           className={({ isActive }) =>
                             isActive
-                              ? 'font-medium tracking-wide text-blue-900 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                              : 'font-medium tracking-wide  text-gray-400 transition-colors duration-200 hover:text-gray-800 px-6 py-3 rounded'
+                              ? 'font-medium tracking-wide text-blue-900 border-b-4 border-indigo-800 transition-colors duration-200 px-6 py-3 rounded'
+                              : 'font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-gray-900 px-6 py-3 rounded'
                           }
                         >
                           Blog
@@ -215,8 +214,8 @@ const Header = () => {
                           to="/fqa"
                           className={({ isActive }) =>
                             isActive
-                              ? 'font-medium tracking-wide text-blue-900 border-b-4 border-green-600 transition-colors duration-200 px-6 py-3 rounded'
-                              : 'font-medium tracking-wide  text-gray-400 transition-colors duration-200 hover:text-gray-800 px-6 py-3 rounded'
+                              ? 'font-medium tracking-wide text-blue-900 border-b-4 border-indigo-800 transition-colors duration-200 px-6 py-3 rounded'
+                              : 'font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-gray-900 px-6 py-3 rounded'
                           }
                         >
                           FAQ
@@ -226,7 +225,7 @@ const Header = () => {
                       <li className='space-y-0'>
                         <NavLink
                           to="/signup"
-                          className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide  text-gray-400 transition duration-200 rounded hover:text-amber-400 "
+                          className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide  text-gray-700 transition duration-200 rounded hover:text-amber-400 "
                         >
                           Sign up
                         </NavLink>
@@ -234,7 +233,7 @@ const Header = () => {
                       <li className='space-y-0'>
                         <NavLink
                           to="/login"
-                          className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide  text-gray-400 transition duration-200 rounded hover:text-amber-400 "
+                          className="inline-flex items-center justify-center h-12 px-2 font-medium tracking-wide  text-gray-700 transition duration-200 rounded hover:text-amber-400 "
                         >
                           Log in
                         </NavLink>
@@ -247,14 +246,10 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <hr />
     </div>
   );
 };
 
 export default Header;
-
-
-
 
 

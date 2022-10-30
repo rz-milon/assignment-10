@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaEnvira } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -11,9 +12,9 @@ const Footer = () => {
             aria-label="Go home"
             className="inline-flex items-center"
           >
-            <i className="fa-solid fa-feather text-fuchsia-500"></i>
-            <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                Al Farabi Academy
+            <FaEnvira className='text-4xl text-green-800 mr-3'></FaEnvira>
+            <span className="ml-2 text-xl font-bold tracking-wide text-indigo-800 uppercase hover:text-blue-700">
+              Al Farabi Academy
             </span>
           </Link>
           <div className="mt-6 lg:max-w-sm">

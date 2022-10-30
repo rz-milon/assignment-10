@@ -3,11 +3,14 @@ import Main from "../../layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Course from "../../Pages/Course/Course";
 import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
+import CourseTopics from "../../Pages/CourseTopics/CourseTopics";
 import FqA from "../../Pages/FqA/FqA";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import Signup from "../../Pages/Login/Signup/Signup";
 import ErrorPage from "../../Pages/Others/ErrorPage/ErrorPage";
+import Profile from "../../Pages/Others/Profile/Profile";
+import PrivetRoutes from "../PrivetRoutes/PrivetRoutes";
 
 export const routes = createBrowserRouter([
     {
@@ -23,19 +26,19 @@ export const routes = createBrowserRouter([
                 path:'home',
                 element:<Home></Home>
             },
+           {
+              path:'courseTopics',
+              element:<CourseTopics></CourseTopics>
+           },
+
             {
-                path:'/courseItems/:id',
-                loader: ()=> fetch('http://localhost:5000/course-items'),
-                element:<Course></Course>
+               path:'course',
+               element:<Course></Course> 
             },
-            {
-                path:'course',
-                element:<Course></Course>
-            },
-            {
-                path:'/course/:id',
-                element:<CourseDetails></CourseDetails>
-            },
+           {
+              path:'courseDetails',
+              element:<PrivetRoutes><CourseDetails></CourseDetails></PrivetRoutes>
+           },
             {
                 path:'blog',
                 element:<Blog></Blog>
@@ -52,6 +55,10 @@ export const routes = createBrowserRouter([
                 path:'login',
                 element:<Login></Login>
             },
+            {
+                path:'profile',
+                element:<Profile></Profile>
+            }
 
         ]
     },
